@@ -25,7 +25,7 @@
   * <b>Confidence interval</b> - Concerned with quantifying uncertainty in estimations
   * <b>Probability models</b> - A formal connection between the data and a population of interest.
   * <b>Study design</b> - The process of designing a study to minimize the variance and bias
-  * <b>Nonparametric boostrapping</b> - The process of using the data to, with minimal probability model assumptions, create inferences
+  * <b>Nonparametric bootstrapping</b> - The process of using the data to, with minimal probability model assumptions, create inferences
   * <b>Permutation</b> - randomization and exchangeability testing: the process of using data permutations to perform inferences
 
 * Different thinking about probability leads to different styles of inference
@@ -59,7 +59,7 @@
     1. The probability that nothing occurs is 0
     2. The probability that something occurs is 1
     3. The probability of something is 1 - the probability that the opposite will occur
-    4. The probability of at least one or two thing cannot simultaneously occur is the sum of their respective probabilities
+    4. The probability of at least one or two things cannot simultaneously occur is the sum of their respective probabilities
     5. For any two events the probability that at least one occurs is the sum of their probabilities minus their intersections
 
 #### Random variables
@@ -105,4 +105,15 @@
     ````
       * notice that S(x) = 1 - F(x) since the survival function evaluated at a particular value of x calculating the probability of the opposite event.
 
-#### Quantiles 
+#### Quantiles
+  * The 𝝰 quantile of a distribution with distribution function F is the point x<sub>𝝰</sub> so
+  that
+  ````
+  F(x<sub>𝝰</sub>) = 𝝰
+  ````
+  * Ex.
+    * If you know you were the 95<sup>th</sup> percentile on an exam you know that 95% of the people scored worse then you and 5% scored better
+  * A <b>percentile</b> is simply a quantile with 𝝰 expressed as a percent rather than a proportion
+    * ex. The population median is the 50th percentile
+  * <b><u>Percentiles are not probabilities</u></b>
+  * Quantiles have units
