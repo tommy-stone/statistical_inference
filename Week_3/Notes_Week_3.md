@@ -127,3 +127,56 @@ $$
   * If n is small, then a Goseet's t  is performed w/ quantile n-n
   * The probability of rejecting the null hypothesis is called power
   * Power is used a lot to calculate sample sizes for experiment
+
+#### Connections w/ confidence intervals
+  * Consider $H_0 : \mu = mu_0$ vs $H_\alpha : \mu \ne \mu_0$
+  * Take the set of all possible values for which you fail to reject $H_0$, this set is a $(1-\alpha)100$% interval contains $\mu$, then we fail to reject $H_0$
+  * The same works in reverse, if a $(1-\alpha)100$% interval contains $mu_0$, then we fail to reject $H_0$
+  $$
+  Estimated \space - \space Hypothesized \space Value \over Standard \space Error
+  $$
+  * Consider testing $H_0 : \mu_1 = \mu_2$, our statistic is for equal variance
+  $$
+  \bar{X_1} - \bar{X_2} - ()\mu_1 - \mu_2) \over S_p\sqrt{{1\over n_1} + {1 \over n_2}}
+  $$
+  * For unequal variance
+  $$
+  \bar{X_1} - \bar{X_2} - ()\mu_1 - \mu_2) \over \sqrt{{S_1^2\over n_1} + {S_2^2 \over n_2}}
+  $$
+
+#### Two group Intervals
+  * Our rejection rules are the same, the only change is how the statistic is calculated. The form is familiar
+  $$
+  Estimated \space - \space Hypothesized \space Value \over Standard \space Error
+  $$
+  * Consider testing $H_0 : \mu_1 = \mu_2$, our statistic is below for equal varaince
+  $$
+  \bar{X_1} - \bar{X_2} - (\mu_1 - \mu_2) \over S_p\sqrt{{1\over n_1} + {1\over n_2}}
+  $$
+  * For unequal variance
+  $$
+  \bar{X_1} - \bar{X_2} - (\mu_1 - \mu_2) \over \sqrt{{S_1^2\over n_1} + {S_2^2\over n_2}}
+  $$
+
+#### P-Values
+##### Introduction to P-values  
+  * P-Values are the most common value of statistical significance
+  * Their ubiquity, along w/ the concern for their interpretation and use makes them controversial among statisticians
+
+#### What is a P-Value
+  * The central idea of a P-value is to assume the null hypothesis is true and calculate how unusual it would be to see data (in the form of a test statistic) as extreme as was seen in favor of the alternative hypothesis
+  * Format definition
+    * A P-value is the probability of observing a test statistic as or more extreme in favor of the alternative than was actually obtained, where the probability is calculated assuming that the null hypothesis is true
+  * A P-value then requires a few steps
+    1. Decide a statistic that evaluates support of the null or alternative hypothesis
+    2. Decide on a distribution of that statistic under the null hypothesis
+    3. Calculate the probability of obtaining a statistic as or more extreme as was observed using the distribution in step 2
+
+#### The attained significance level
+  * The smallest value for alpha that you still reject the null hypothesis is called the <u>attained significance level</u>
+  * This is mathematically equivalent, but philosophically a little different, from the P-value
+    * The P-value is the probability of how extreme our test statistic is under null
+    * The attained significance level merely conveys what the smallest level of $\alpha$ that one could reject at
+  * Here are the two rules for performing hypothesis tests with P-values
+    1. If the P-value for a test is less than $\alpha$ you reject the null hypothesis
+    2. For two sided hypothesis test, double the smaller of the two one sided hypothesis test P-values 
